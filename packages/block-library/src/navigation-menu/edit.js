@@ -53,7 +53,7 @@ function NavigationMenu( {
 			}
 
 			return pages.map( ( { title, type, link: url, id } ) => (
-				[ 'core/navigation-menu-item', {
+				[ 'core/navigation-link', {
 					label: title.rendered,
 					title: title.raw,
 					type,
@@ -154,7 +154,7 @@ function NavigationMenu( {
 				{ pages &&
 					<InnerBlocks
 						template={ defaultMenuItems ? defaultMenuItems : null }
-						allowedBlocks={ [ 'core/navigation-menu-item' ] }
+						allowedBlocks={ [ 'core/navigation-link' ] }
 						templateInsertUpdatesSelection={ false }
 						__experimentalMoverDirection={ 'horizontal' }
 					/>
